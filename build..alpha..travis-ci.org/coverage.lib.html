@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-gulp-requirejs-optimize/gulp-requirejs-optimize/index.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-gulp-requirejs-optimize/node_modules/gulp-requirejs-optimize/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-gulp-requirejs-optimize">npmtest-gulp-requirejs-optimize (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-requirejs-optimize/gulp-requirejs-optimize/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-requirejs-optimize/node_modules/gulp-requirejs-optimize/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">14.93% <small>(10 / 67)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-gulp-requirejs-optimize/gulp-requirejs-optimize/</a> » index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-gulp-requirejs-optimize/node_modules/gulp-requirejs-optimize/</a> &#187; index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -489,131 +491,130 @@ var applySourceMap = require('vinyl-sourcemaps-apply');
 &nbsp;
 var PLUGIN_NAME = 'gulp-requirejs-optimize';
 &nbsp;
-<span class="fstat-no" title="function not covered">function pathToModuleId(path) {</span>
+<span class="fstat-no" title="function not covered" >function pathToModuleId(path) {</span>
 	// replace Windows path separators to make sure this is a valid module ID
-<span class="cstat-no" title="statement not covered">	path = path.replace(/\\/g, '/');</span>
+<span class="cstat-no" title="statement not covered" >	path = path.replace(/\\/g, '/');</span>
 &nbsp;
 	// remove the file extension if this is a .js file
-<span class="cstat-no" title="statement not covered">	var filenameEndIndex = path.length - 3;</span>
-<span class="cstat-no" title="statement not covered">	var extensionIndex = path.indexOf('.js', filenameEndIndex);</span>
-<span class="cstat-no" title="statement not covered">	if (extensionIndex !== -1 &amp;&amp; extensionIndex === filenameEndIndex) {</span>
-<span class="cstat-no" title="statement not covered">		path = path.substring(0, filenameEndIndex);</span>
+<span class="cstat-no" title="statement not covered" >	var filenameEndIndex = path.length - 3;</span>
+<span class="cstat-no" title="statement not covered" >	var extensionIndex = path.indexOf('.js', filenameEndIndex);</span>
+<span class="cstat-no" title="statement not covered" >	if (extensionIndex !== -1 &amp;&amp; extensionIndex === filenameEndIndex) {</span>
+<span class="cstat-no" title="statement not covered" >		path = path.substring(0, filenameEndIndex);</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered">	return path;</span>
+<span class="cstat-no" title="statement not covered" >	return path;</span>
 }
 &nbsp;
-module.exports = <span class="fstat-no" title="function not covered">function(options) {</span>
-<span class="cstat-no" title="statement not covered">	requirejs.define('node/print', [], <span class="fstat-no" title="function not covered">function() {</span></span>
-<span class="cstat-no" title="statement not covered">		return <span class="fstat-no" title="function not covered">function(msg) {</span></span>
-<span class="cstat-no" title="statement not covered">			if (msg.substring(0, 5) === 'Error') {</span>
-<span class="cstat-no" title="statement not covered">				gutil.log(chalk.red(msg));</span>
+module.exports = <span class="fstat-no" title="function not covered" >function(options) {</span>
+<span class="cstat-no" title="statement not covered" >	requirejs.define('node/print', [], <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >		return <span class="fstat-no" title="function not covered" >function(msg) {</span></span>
+<span class="cstat-no" title="statement not covered" >			if (msg.substring(0, 5) === 'Error') {</span>
+<span class="cstat-no" title="statement not covered" >				gutil.log(chalk.red(msg));</span>
 			} else {
-<span class="cstat-no" title="statement not covered">				gutil.log(msg);</span>
+<span class="cstat-no" title="statement not covered" >				gutil.log(msg);</span>
 			}
 		};
 	});
 &nbsp;
-<span class="cstat-no" title="statement not covered">	options = options || {};</span>
+<span class="cstat-no" title="statement not covered" >	options = options || {};</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	var generateOptions;</span>
-<span class="cstat-no" title="statement not covered">	if (typeof options === 'function') {</span>
-<span class="cstat-no" title="statement not covered">		generateOptions = options;</span>
+<span class="cstat-no" title="statement not covered" >	var generateOptions;</span>
+<span class="cstat-no" title="statement not covered" >	if (typeof options === 'function') {</span>
+<span class="cstat-no" title="statement not covered" >		generateOptions = options;</span>
 	} else {
-<span class="cstat-no" title="statement not covered">		generateOptions = <span class="fstat-no" title="function not covered">function() {</span></span>
-<span class="cstat-no" title="statement not covered">			return options;</span>
+<span class="cstat-no" title="statement not covered" >		generateOptions = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >			return options;</span>
 		};
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered">	var error;</span>
+<span class="cstat-no" title="statement not covered" >	var error;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	return through.obj(<span class="fstat-no" title="function not covered">function(file, enc, cb) {</span></span>
-<span class="cstat-no" title="statement not covered">		if (file.isNull()) {</span>
-<span class="cstat-no" title="statement not covered">			cb(null, file);</span>
-<span class="cstat-no" title="statement not covered">			return;</span>
+<span class="cstat-no" title="statement not covered" >	return through.obj(<span class="fstat-no" title="function not covered" >function(file, enc, cb) {</span></span>
+<span class="cstat-no" title="statement not covered" >		if (file.isNull()) {</span>
+<span class="cstat-no" title="statement not covered" >			cb(null, file);</span>
+<span class="cstat-no" title="statement not covered" >			return;</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered">		if (file.isStream()) {</span>
-<span class="cstat-no" title="statement not covered">			cb(new gutil.PluginError(PLUGIN_NAME, 'Streaming not supported'));</span>
-<span class="cstat-no" title="statement not covered">			return;</span>
+<span class="cstat-no" title="statement not covered" >		if (file.isStream()) {</span>
+<span class="cstat-no" title="statement not covered" >			cb(new gutil.PluginError(PLUGIN_NAME, 'Streaming not supported'));</span>
+<span class="cstat-no" title="statement not covered" >			return;</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered">		var optimizeOptions = generateOptions(file);</span>
-<span class="cstat-no" title="statement not covered">		if (typeof optimizeOptions !== 'object') {</span>
-<span class="cstat-no" title="statement not covered">			cb(new gutil.PluginError(PLUGIN_NAME, 'Options function must produce an options object'));</span>
-<span class="cstat-no" title="statement not covered">			return;</span>
+<span class="cstat-no" title="statement not covered" >		var optimizeOptions = generateOptions(file);</span>
+<span class="cstat-no" title="statement not covered" >		if (typeof optimizeOptions !== 'object') {</span>
+<span class="cstat-no" title="statement not covered" >			cb(new gutil.PluginError(PLUGIN_NAME, 'Options function must produce an options object'));</span>
+<span class="cstat-no" title="statement not covered" >			return;</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered">		var sourceMapPresent = Boolean(file.sourceMap);</span>
+<span class="cstat-no" title="statement not covered" >		var sourceMapPresent = Boolean(file.sourceMap);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">		optimizeOptions = defaults({}, optimizeOptions, {</span>
+<span class="cstat-no" title="statement not covered" >		optimizeOptions = defaults({}, optimizeOptions, {</span>
 			logLevel: 2,
 			baseUrl: file.base,
 			out: file.relative,
 			generateSourceMaps: sourceMapPresent
 		});
 &nbsp;
-<span class="cstat-no" title="statement not covered">		if (optimizeOptions.generateSourceMaps) {</span>
-<span class="cstat-no" title="statement not covered">			defaults(optimizeOptions, {</span>
+<span class="cstat-no" title="statement not covered" >		if (optimizeOptions.generateSourceMaps) {</span>
+<span class="cstat-no" title="statement not covered" >			defaults(optimizeOptions, {</span>
 				preserveLicenseComments: false
 			});
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered">		if (!optimizeOptions.include &amp;&amp; !optimizeOptions.name) {</span>
-<span class="cstat-no" title="statement not covered">			optimizeOptions.include = pathToModuleId(file.relative);</span>
+<span class="cstat-no" title="statement not covered" >		if (!optimizeOptions.include &amp;&amp; !optimizeOptions.name) {</span>
+<span class="cstat-no" title="statement not covered" >			optimizeOptions.include = pathToModuleId(file.relative);</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered">		if (typeof optimizeOptions.out !== 'string') {</span>
-<span class="cstat-no" title="statement not covered">			cb(new gutil.PluginError(PLUGIN_NAME, 'If `out` is supplied, it must be a string'));</span>
-<span class="cstat-no" title="statement not covered">			return;</span>
+<span class="cstat-no" title="statement not covered" >		if (typeof optimizeOptions.out !== 'string') {</span>
+<span class="cstat-no" title="statement not covered" >			cb(new gutil.PluginError(PLUGIN_NAME, 'If `out` is supplied, it must be a string'));</span>
+<span class="cstat-no" title="statement not covered" >			return;</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered">		var out = optimizeOptions.out;</span>
-<span class="cstat-no" title="statement not covered">		optimizeOptions.out = <span class="fstat-no" title="function not covered">function(text, sourceMapText) {</span></span>
-<span class="cstat-no" title="statement not covered">			if (sourceMapPresent) {</span>
+<span class="cstat-no" title="statement not covered" >		var out = optimizeOptions.out;</span>
+<span class="cstat-no" title="statement not covered" >		optimizeOptions.out = <span class="fstat-no" title="function not covered" >function(text, sourceMapText) {</span></span>
+<span class="cstat-no" title="statement not covered" >			if (sourceMapPresent) {</span>
 				// uglify adds its own sourceMappingURL comment which will get duplicated by gulp-sourcemaps
-<span class="cstat-no" title="statement not covered">				text = text.replace(/\/\/# sourceMappingURL=.*$/, '');</span>
+<span class="cstat-no" title="statement not covered" >				text = text.replace(/\/\/# sourceMappingURL=.*$/, '');</span>
 			}
 &nbsp;
-<span class="cstat-no" title="statement not covered">			var outfile = new gutil.File({</span>
+<span class="cstat-no" title="statement not covered" >			var outfile = new gutil.File({</span>
 				path: out,
 				contents: new Buffer(text)
 			});
 &nbsp;
-<span class="cstat-no" title="statement not covered">			if (sourceMapText) {</span>
-<span class="cstat-no" title="statement not covered">				applySourceMap(outfile, sourceMapText);</span>
+<span class="cstat-no" title="statement not covered" >			if (sourceMapText) {</span>
+<span class="cstat-no" title="statement not covered" >				applySourceMap(outfile, sourceMapText);</span>
 			}
 &nbsp;
-<span class="cstat-no" title="statement not covered">			cb(null, outfile);</span>
+<span class="cstat-no" title="statement not covered" >			cb(null, outfile);</span>
 		};
 &nbsp;
-<span class="cstat-no" title="statement not covered">		var target;</span>
-<span class="cstat-no" title="statement not covered">		if (optimizeOptions.logLevel &lt; 2) {</span>
-<span class="cstat-no" title="statement not covered">			target = path.resolve(file.path);</span>
+<span class="cstat-no" title="statement not covered" >		var target;</span>
+<span class="cstat-no" title="statement not covered" >		if (optimizeOptions.logLevel &lt; 2) {</span>
+<span class="cstat-no" title="statement not covered" >			target = path.resolve(file.path);</span>
 		} else {
-<span class="cstat-no" title="statement not covered">			target = file.relative;</span>
+<span class="cstat-no" title="statement not covered" >			target = file.relative;</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered">		gutil.log('Optimizing ' + chalk.magenta(target));</span>
-<span class="cstat-no" title="statement not covered">		requirejs.optimize(optimizeOptions, null, <span class="fstat-no" title="function not covered">function(err) {</span></span>
-<span class="cstat-no" title="statement not covered">			error = err;</span>
-<span class="cstat-no" title="statement not covered">			cb();</span>
+<span class="cstat-no" title="statement not covered" >		gutil.log('Optimizing ' + chalk.magenta(target));</span>
+<span class="cstat-no" title="statement not covered" >		requirejs.optimize(optimizeOptions, null, <span class="fstat-no" title="function not covered" >function(err) {</span></span>
+<span class="cstat-no" title="statement not covered" >			error = err;</span>
+<span class="cstat-no" title="statement not covered" >			cb();</span>
 		});
-	}, <span class="fstat-no" title="function not covered">function(cb) {</span>
-<span class="cstat-no" title="statement not covered">		if (error) {</span>
-<span class="cstat-no" title="statement not covered">			cb(new gutil.PluginError(PLUGIN_NAME, error));</span>
+	}, <span class="fstat-no" title="function not covered" >function(cb) {</span>
+<span class="cstat-no" title="statement not covered" >		if (error) {</span>
+<span class="cstat-no" title="statement not covered" >			cb(new gutil.PluginError(PLUGIN_NAME, error));</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered">		cb();</span>
+<span class="cstat-no" title="statement not covered" >		cb();</span>
 	});
 };
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 21:24:24 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 20:01:19 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
